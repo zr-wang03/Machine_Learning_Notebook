@@ -85,3 +85,72 @@ from sklearn.model_selection import train_test_split
 # run this script.
 train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 0)
 ```
+
+Compare the following two:&#x20;
+
+```
+candidate_max_leaf_nodes = [5, 25, 50, 100, 250, 500]
+minMae=float('inf')
+best_candidate=0
+for candidate in range(len(candidate_max_leaf_nodes)):
+    max_leaf_nodes= candidate_max_leaf_nodes[candidate]
+    curr=get_mae(max_leaf_nodes,train_X,val_X,train_y,val_y)
+    if curr<minMae:
+        best_candidate=candidate
+        minMae=curr
+    
+# Store the best value of max_leaf_nodes (it will be either 5, 25, 50, 100, 250 or 500)
+best_tree_size = candidate_max_leaf_nodes[best_candidate]
+```
+
+```
+scores = {leaf_size: get_mae(leaf_size, train_X, val_X, train_y, val_y) for leaf_size in candidate_max_leaf_nodes}
+best_tree_size = min(scores, key=scores.get)
+```
+
+Avoid overfitting using validation sets:
+
+first define a function that returns the error using a specfic number of max\_leaf\_nodes. Then iteratively try several candidates to choose the best one.&#x20;
+
+```
+def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+    model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+    model.fit(train_X, train_y)
+    preds_val = model.predict(val_X)
+    mae = mean_absolute_error(val_y, preds_val)
+    return(mae)
+    
+    
+candidate_max_leaf_nodes = [5, 25, 50, 100, 250, 500]    
+scores = {leaf_size: get_mae(leaf_size, train_X, val_X, train_y, val_y) for leaf_size in candidate_max_leaf_nodes}
+best_tree_size = min(scores, key=scores.get)
+final_model = DecisionTreeRegressor(max_leaf_nodes=best_tree_size)
+# fit the final model and uncomment the next two lines
+final_model.fit(X, y) # We have made our choice on which parameter to use so
+#we don't need to keep the validation set, and can push it into the model for more 
+#examples.
+```
+
+
+
+Use random forest instead:&#x20;
+
+```
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+
+forest_model = RandomForestRegressor(random_state=1)
+forest_model.fit(train_X, train_y)
+melb_preds = forest_model.predict(val_X)
+print(mean_absolute_error(val_y, melb_preds))
+```
+
+
+
+Generate a csv file that includes predictions for submission:
+
+```
+output = pd.DataFrame({'Id': test_data.Id,
+                       'SalePrice': test_preds})
+output.to_csv('submission.csv', index=False)
+```
