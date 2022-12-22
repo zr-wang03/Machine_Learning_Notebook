@@ -20,7 +20,7 @@ See a list of all columns
 housing_data.columns
 ```
 
-Drop a role (a sample) (axis=0 => horizontal)
+Drop a row (a sample) (axis=0 => horizontal)
 
 ```
 housing_data = housing_data.dropna(axis=0)
