@@ -18,12 +18,20 @@ Second idea: Imputation(filling the empty values with some value: mean, medium, 
 
 Use SimpleImputer from sklearn
 
+NOTE: .fit\_transform() is equal to .fit().transform()
+
+.fit() is used to compute the values: mean, medium and so
+
+.transform() is using the values above to fill in the blanks
+
 ```
 from sklearn.impute import SimpleImputer
 
 # Imputation
 my_imputer = SimpleImputer()
 imputed_X_train = pd.DataFrame(my_imputer.fit_transform(X_train))
+#The fit method is used on X_train so that the value properties in X_valid is not 
+#reveal to the training set too early
 imputed_X_valid = pd.DataFrame(my_imputer.transform(X_valid))
 
 # Imputation removed column names; put them back

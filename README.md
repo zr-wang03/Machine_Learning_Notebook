@@ -10,7 +10,7 @@ To read a csv file with pandas & print a summay of the data
 
 ```
 file_path='../dirc/data.csv'
-housing_data=pd.read_csv(file_path)
+housing_data=pd.read_csv(file_path，index_col='Id')
 housing_data.describe
 ```
 
@@ -21,6 +21,10 @@ housing_data.columns
 ```
 
 Drop a row (a sample) (axis=0 => horizontal)
+
+dropna parameters:&#x20;
+
+[https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
 
 ```
 housing_data = housing_data.dropna(axis=0)
@@ -134,6 +138,8 @@ final_model.fit(X, y) # We have made our choice on which parameter to use so
 
 
 Use random forest instead:&#x20;
+
+parameter: n\_estimators => maximum number of trees in the forest
 
 ```
 from sklearn.ensemble import RandomForestRegressor
