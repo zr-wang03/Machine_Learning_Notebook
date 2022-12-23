@@ -9,7 +9,9 @@
 ```
 # Get list of categorical variables
 s = (X_train.dtypes == 'object')
+# s is a series that uses the Column names as the index and true/false as the value
 object_cols = list(s[s].index)
+# Find where the list contains a "true" value and extract the index there
 
 print("Categorical variables:")
 print(object_cols)
@@ -60,6 +62,10 @@ num_X_valid = X_valid.drop(object_cols, axis=1)
 OH_X_train = pd.concat([num_X_train, OH_cols_train], axis=1)
 OH_X_valid = pd.concat([num_X_valid, OH_cols_valid], axis=1)
 ```
+
+
+
+Cardinality: The number of unique entries in a categorical value list
 
 
 

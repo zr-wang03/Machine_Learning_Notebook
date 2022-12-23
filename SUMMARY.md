@@ -5,3 +5,4 @@
 * [Machine Learning: Categorical Values](machine-learning-categorical-values.md)
 * [Machine learning with pytorch](machine-learning-with-pytorch/README.md)
   * [Tensors](machine-learning-with-pytorch/tensors.md)
+* [Python Basics](python-basics.md)
