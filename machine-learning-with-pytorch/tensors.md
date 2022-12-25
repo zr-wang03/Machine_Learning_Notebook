@@ -10,7 +10,7 @@ In other words: It is just a buch of number/data. 0D tensor is a number. 1D tens
 
 #### Data Type:&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Creating a tensor:
 

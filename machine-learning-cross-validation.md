@@ -4,7 +4,7 @@ In order to  better represent model strength with validation scores, we want to 
 
 This may affect run time though so it is more appliable to a small dataset.&#x20;
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Use cross\_val\_score from sklearn
 
