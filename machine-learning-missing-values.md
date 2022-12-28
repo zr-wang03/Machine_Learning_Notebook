@@ -2,7 +2,7 @@
 
 First idea: drop the colomns with missing values.
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 # Get names of columns with missing values
