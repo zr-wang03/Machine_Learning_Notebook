@@ -7,6 +7,7 @@
 * [Machine Learning : Cross Validation](machine-learning-cross-validation.md)
 * [Machine Learning: XGBoost](machine-learning-xgboost.md)
 * [Machine Learning: Data Leakage](machine-learning-data-leakage.md)
+* [Machine Learning: GAN](machine-learning-gan.md)
 * [Machine learning with pytorch](machine-learning-with-pytorch/README.md)
   * [Tensors](machine-learning-with-pytorch/tensors.md)
 * [Python Basics](python-basics.md)
