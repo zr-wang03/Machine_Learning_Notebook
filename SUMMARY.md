@@ -1,6 +1,7 @@
 # Table of contents
 
-* [PRE-Machine Learning : Data](README.md)
+* [Overview of process of a ML project](README.md)
+* [PRE-Machine Learning : Data](<README (1).md>)
 * [Machine Learning: Missing values](machine-learning-missing-values.md)
 * [Machine Learning: Categorical Values](machine-learning-categorical-values.md)
 * [Machine Learning:  Pipelines](machine-learning-pipelines.md)

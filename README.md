@@ -1,162 +1,46 @@
-# PRE-Machine Learning : Data
+# Overview of process of a ML project
 
-To use pandas:
+Basic workflow:
 
-```
-import pandas as pd
-```
+[https://www.kaggle.com/code/startupsci/titanic-data-science-solutions](https://www.kaggle.com/code/startupsci/titanic-data-science-solutions)
 
-To read a csv file with pandas & print a summay of the data
+From the link above:
 
-```
-file_path='../dirc/data.csv'
-housing_data=pd.read_csv(file_path，index_col='Id')
-housing_data.describe
-```
+1. Question or problem definition.
+2. Acquire training and testing data.
+3. Wrangle, prepare, cleanse the data.
+4. Analyze, identify patterns, and explore the data.
+5. Model, predict and solve the problem.
+6. Visualize, report, and present the problem solving steps and final solution.
+7. Supply or submit the results.
 
-See a list of all columns
-
-```
-housing_data.columns
-```
-
-Drop a row (a sample) (axis=0 => horizontal)
-
-dropna parameters:&#x20;
-
-[https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
-
-```
-housing_data = housing_data.dropna(axis=0)
-```
-
-Take out a specifc column(the target price in this example)&#x20;
-
-```
-y = melbourne_data.Price //Note price is the name of the column as seen above
-```
-
-Selecting multiple (columns) features (still, the strings are names shown above)
-
-```
-housing_features = ['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude']
-X = housing_data[melbourne_features]
-```
-
-Show the first few lines&#x20;
-
-```
-X.head()
-```
-
-scikit-learn => sklearn
-
-use DecsionTreeRegressor in sklaern:
-
-```
-from sklearn.tree import DecisionTreeRegressor
-
-# Define model. Specify a number for random_state to ensure same results each run
-melbourne_model = DecisionTreeRegressor(random_state=1)
-
-# Fit model
-melbourne_model.fit(X, y)
-```
-
-Make a prediction
-
-```
-predicted_home_prices = melbourne_model.predict(X)
-```
-
-Use mean aboslute error
-
-```
-from sklearn.metrics import mean_absolute_error
-
-predicted_home_prices = melbourne_model.predict(X)
-mean_absolute_error(y, predicted_home_prices)
-```
-
-Use train\_test\_split from scikit-learn to split up the dataset
-
-```
-from sklearn.model_selection import train_test_split
-
-# split data into training and validation data, for both features and target
-# The split is based on a random number generator. Supplying a numeric value to
-# the random_state argument guarantees we get the same split every time we
-# run this script.
-train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 0)
-```
-
-Compare the following two:&#x20;
-
-```
-candidate_max_leaf_nodes = [5, 25, 50, 100, 250, 500]
-minMae=float('inf')
-best_candidate=0
-for candidate in range(len(candidate_max_leaf_nodes)):
-    max_leaf_nodes= candidate_max_leaf_nodes[candidate]
-    curr=get_mae(max_leaf_nodes,train_X,val_X,train_y,val_y)
-    if curr<minMae:
-        best_candidate=candidate
-        minMae=curr
-    
-# Store the best value of max_leaf_nodes (it will be either 5, 25, 50, 100, 250 or 500)
-best_tree_size = candidate_max_leaf_nodes[best_candidate]
-```
-
-```
-scores = {leaf_size: get_mae(leaf_size, train_X, val_X, train_y, val_y) for leaf_size in candidate_max_leaf_nodes}
-best_tree_size = min(scores, key=scores.get)
-```
-
-Avoid overfitting using validation sets:
-
-first define a function that returns the error using a specfic number of max\_leaf\_nodes. Then iteratively try several candidates to choose the best one.&#x20;
-
-```
-def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
-    model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
-    model.fit(train_X, train_y)
-    preds_val = model.predict(val_X)
-    mae = mean_absolute_error(val_y, preds_val)
-    return(mae)
-    
-    
-candidate_max_leaf_nodes = [5, 25, 50, 100, 250, 500]    
-scores = {leaf_size: get_mae(leaf_size, train_X, val_X, train_y, val_y) for leaf_size in candidate_max_leaf_nodes}
-best_tree_size = min(scores, key=scores.get)
-final_model = DecisionTreeRegressor(max_leaf_nodes=best_tree_size)
-# fit the final model and uncomment the next two lines
-final_model.fit(X, y) # We have made our choice on which parameter to use so
-#we don't need to keep the validation set, and can push it into the model for more 
-#examples.
-```
+\
 
 
+Personal Thinking:
 
-Use random forest instead:&#x20;
+Understanding the data
 
-parameter: n\_estimators => maximum number of trees in the forest
+1. Import the libraries
+2. Look at the data given and see which sets are numerical(continuous or discrete or ordinal), which are categorical,  and which are not numbers (Like names etc)
+3. Make educated guesses on what correlates with the result and what doesn’t&#x20;
+4. Use visualization to support and complete the guesses (assumptions)
+5. Drop the features that are not contributing, or merging several into one that contributes better
 
-```
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_error
-
-forest_model = RandomForestRegressor(random_state=1)
-forest_model.fit(train_X, train_y)
-melb_preds = forest_model.predict(val_X)
-print(mean_absolute_error(val_y, melb_preds))
-```
+\
 
 
+Preparing for modeling
 
-Generate a csv file that includes predictions for submission:
+1. Completing the data using mean values, random values or combined etc.
+2. Changing the data into numerical ones, like going from female+male to gender:1 or 0. (Most models work better with numbers so we want that to be the case)
+3. Choose the model that works best in the scenario (Supervised learning? Unsupervised?)（Structured data or not?）
+4. Compare available choices and pick the one with the highest score of confidence.&#x20;
 
-```
-output = pd.DataFrame({'Id': test_data.Id,
-                       'SalePrice': test_preds})
-output.to_csv('submission.csv', index=False)
-```
+\
+\
+
+
+A violin plot is more informative than a plain box plot. While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data. The difference is particularly useful when the data distribution is multimodal (more than one peak). In this case a violin plot shows the presence of different peaks, their position and relative amplitude.
+
+\
