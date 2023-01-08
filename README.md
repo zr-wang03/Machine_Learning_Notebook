@@ -1,46 +1,9 @@
-# Overview of process of a ML project
+# GAN(Generative Adversarial Network)
 
-Basic workflow:
+GAN 是生成对抗网络（Generative Adversarial Network）的缩写。它是一种深度学习模型，由两个网络组成：生成器和判别器。
 
-[https://www.kaggle.com/code/startupsci/titanic-data-science-solutions](https://www.kaggle.com/code/startupsci/titanic-data-science-solutions)
+生成器的任务是生成新的数据，例如图像、声音或文本。判别器的任务是识别真实数据和生成数据。两个网络相互协作，通过对抗来提高生成器的效果。
 
-From the link above:
+生成器会生成新的数据，然后将其与真实数据一起输入判别器。判别器的任务是分辨这些数据是真实的还是生成的。如果判别器无法区分出真实数据和生成数据，那么就意味着生成器的输出是非常接近真实数据的。
 
-1. Question or problem definition.
-2. Acquire training and testing data.
-3. Wrangle, prepare, cleanse the data.
-4. Analyze, identify patterns, and explore the data.
-5. Model, predict and solve the problem.
-6. Visualize, report, and present the problem solving steps and final solution.
-7. Supply or submit the results.
-
-\
-
-
-Personal Thinking:
-
-Understanding the data
-
-1. Import the libraries
-2. Look at the data given and see which sets are numerical(continuous or discrete or ordinal), which are categorical,  and which are not numbers (Like names etc)
-3. Make educated guesses on what correlates with the result and what doesn’t&#x20;
-4. Use visualization to support and complete the guesses (assumptions)
-5. Drop the features that are not contributing, or merging several into one that contributes better
-
-\
-
-
-Preparing for modeling
-
-1. Completing the data using mean values, random values or combined etc.
-2. Changing the data into numerical ones, like going from female+male to gender:1 or 0. (Most models work better with numbers so we want that to be the case)
-3. Choose the model that works best in the scenario (Supervised learning? Unsupervised?)（Structured data or not?）
-4. Compare available choices and pick the one with the highest score of confidence.&#x20;
-
-\
-\
-
-
-A violin plot is more informative than a plain box plot. While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data. The difference is particularly useful when the data distribution is multimodal (more than one peak). In this case a violin plot shows the presence of different peaks, their position and relative amplitude.
-
-\
+GAN 用于生成新的数据是非常有效的，它可以用来生成图像、声音、文本等各种数据。它们在许多领域都有应用，包括计算机视觉、自然语言处理、生物信息学等。
