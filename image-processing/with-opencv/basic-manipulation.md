@@ -1,10 +1,4 @@
-# 2.2.2\_basic\_image\_manipulation\_open\_CV
-
-[![Skills Network Logo](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/assets/logos/SN\_web\_lightmode.png)](https://skills.network/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-
-## **Manipulating Images**
-
-Estimated time needed: **30** minutes
+# Basic Manipulation
 
 ### Objectives
 
@@ -81,7 +75,7 @@ In this lab, you will learn how to manipulate images, OpenCV image Arrays. You w
     plt.show()
     ```
 
-    ![png](<../../.gitbook/assets/output\_13\_0 (1)>)
+    ![png](../../.gitbook/assets/output\_13\_0)
 
     If we do not apply the method `copy()`, the new variable will point to the same location in memory:
 
@@ -281,7 +275,7 @@ In this lab, you will learn how to manipulate images, OpenCV image Arrays. You w
   ```
 *
 
-    ![png](../../.gitbook/assets/output\_51\_0)
+    ![png](<../../.gitbook/assets/output\_51\_0 (1)>)
 * ### Changing Specific Image Pixels
 * We can change specific image pixels using array indexing; for example, we can set all the channels in the original image we cropped to zero :
 * ```python
@@ -359,22 +353,3 @@ In this lab, you will learn how to manipulate images, OpenCV image Arrays. You w
 *
 
     ![png](../../.gitbook/assets/output\_63\_1)
-* Double-click **here** for a hint.
-* Double-click **here** for the solution.
-* ### Authors
-* [Joseph Santarcangelo](https://www.linkedin.com/in/joseph-s-50398b136/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01) has a PhD in Electrical Engineering, his research focused on using machine learning, signal processing, and computer vision to determine how videos impact human cognition. Joseph has been working for IBM since he completed his PhD.
-* [Nayef Abou Tayoun](https://www.linkedin.com/in/nayefaboutayoun/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01) has a master of management in artificial intelligence degree, focusing on using machine learning and computer vision.
-* ## References
-* \[1] Images were taken from: https://homepages.cae.wisc.edu/\~ece533/images/
-* \[2] [Pillow Docs](https://pillow.readthedocs.io/en/stable/index.html?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-* \[3] [Open CV](https://opencv.org/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-* \[4] Gonzalez, Rafael C., and Richard E. Woods. "Digital image processing." (2017).
-* ### Change Log
-
-| Date (YYYY-MM-DD) | Version | Changed By | Change Description      |
-| ----------------- | ------- | ---------- | ----------------------- |
-| 2020-07-20        | 0.2     | Azim       | Modified Multiple Areas |
-| 2020-07-17        | 0.1     | Azim       | Created Lab Template    |
-| 2021-03-06        | 0.3     | Nayef      | Modified some codes     |
-
-* Copyright © 2020 IBM Corporation. All rights reserved.

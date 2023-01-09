@@ -1,10 +1,10 @@
-# 2.1.2\_Images\_with\_python\_library\_CV
+---
+description: From IBM Skills Network
+---
 
-[![Skills Network Logo](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/assets/logos/SN\_web\_lightmode.png)](https://skills.network/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
+# Image Basics
 
 ## OpenCV Library
-
-Estimated time needed: **60** minutes
 
 ### Objectives
 
@@ -88,22 +88,12 @@ Image files are stored in the file system of your computer. The location of it i
 ```python
 import os
 cwd = os.getcwd()
-cwd 
-```
-
-```
-'/resources/labs/CV0101EN'
 ```
 
 The "path" to an image can be found using the following line of code.
 
 ```python
 image_path = os.path.join(cwd, my_image)
-image_path
-```
-
-```
-'/resources/labs/CV0101EN/lenna.png'
 ```
 
 ### Load in Image in Python
@@ -142,37 +132,11 @@ image.shape
 
 The shape is the same as the PIL array, but there are several differences; for example, PIL returns in (R, G, B) format whereas OpenCV returns in (B, G, R) format.
 
-Each pixel could take on 256 possible values as intensity, ranging from 0 to 255, with 0 being the lowest intensity and 255 being the highest. The maximum and minimum intensity values of an image can be obtained, respectively, by calling:
-
-```python
-image.max()
-```
-
-```
-255
-```
-
-and
-
-```python
-image.min()
-```
-
-```
-3
-```
+Each pixel could take on 256 possible values as intensity, ranging from 0 to 255, with 0 being the lowest intensity and 255 being the highest.&#x20;
 
 ### Plotting an Image
 
-You can use OpenCV's `imshow` function to open the image in a new window, but this may give you some issues in Jupyter:
-
-```python
-#cv2.imshow('image', imgage)
-#cv2.waitKey(0)
-#cv2.destroyAllWindows()
-```
-
-You can also use the `imshow` function from the `matplotlib` library:
+You can use the `imshow` function from the `matplotlib` library:
 
 ```python
 import matplotlib.pyplot as plt
@@ -215,10 +179,6 @@ You can save the image as in `jpg` format.
 
 ```python
 cv2.imwrite("lenna.jpg", image)
-```
-
-```
-True
 ```
 
 #### Grayscale Images
@@ -275,7 +235,7 @@ plt.imshow(im_gray,cmap='gray')
 plt.show()
 ```
 
-![png](../../.gitbook/assets/output\_59\_0)
+![png](<../../.gitbook/assets/output\_59\_0 (1)>)
 
 #### Color Channels
 
@@ -315,7 +275,7 @@ plt.title("Different color channels  blue (top), green (middle), red (bottom)  "
 plt.show()
 ```
 
-![png](<../../.gitbook/assets/output\_68\_0 (1)>)
+![png](../../.gitbook/assets/output\_68\_0)
 
 #### Indexing
 
@@ -454,32 +414,6 @@ plt.show()
 
 ![png](../../.gitbook/assets/output\_90\_0)
 
-Double-click **here** for a hint.
 
-Double-click **here** for the solution.
 
-### Authors
-
-[Joseph Santarcangelo](https://www.linkedin.com/in/joseph-s-50398b136/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01) has a PhD in Electrical Engineering, his research focused on using machine learning, signal processing, and computer vision to determine how videos impact human cognition. Joseph has been working for IBM since he completed his PhD.
-
-[Nayef Abou Tayoun](https://www.linkedin.com/in/nayefaboutayoun/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01) has a master of management in artificial intelligence degree, focusing on using machine learning and computer vision.
-
-## References
-
-\[1] Images were taken from: https://homepages.cae.wisc.edu/\~ece533/images/
-
-\[2] [Pillow Docs](https://pillow.readthedocs.io/en/stable/index.html?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-
-\[3] [Open CV](https://opencv.org/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-
-\[4] Gonzalez, Rafael C., and Richard E. Woods. "Digital image processing." (2017).
-
-### Change Log
-
-| Date (YYYY-MM-DD) | Version | Changed By | Change Description      |
-| ----------------- | ------- | ---------- | ----------------------- |
-| 2020-07-20        | 0.2     | Azim       | Modified Multiple Areas |
-| 2020-07-17        | 0.1     | Azim       | Created Lab Template    |
-| 2021-03-06        | 0.3     | Nayef      | Modified some codes     |
-
-Copyright © 2020 IBM Corporation. All rights reserved.
+###

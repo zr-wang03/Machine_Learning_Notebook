@@ -2,7 +2,7 @@
 
 First idea: drop the colomns with missing values.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 # Get names of columns with missing values
@@ -41,7 +41,7 @@ imputed_X_valid.columns = X_valid.columns
 
 Building on that: add a new feature that records where imputation took place
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 # Make copy to avoid changing original data (when imputing)

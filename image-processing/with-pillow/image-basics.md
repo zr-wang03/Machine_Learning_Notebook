@@ -1,10 +1,4 @@
-# 2.1.1\_Images\_with\_python\_library\_PIL
-
-[![Skills Network Logo](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/assets/logos/SN\_web\_lightmode.png)](https://skills.network/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-
-## **Pillow Library (PIL)**
-
-Estimated time needed: **60** minutes
+# Image Basics
 
 ### Objectives
 
@@ -135,7 +129,7 @@ If you are working in a Jupyter environment, you can view the image by calling t
 image
 ```
 
-![png](../../.gitbook/assets/output\_25\_0)
+![png](<../../.gitbook/assets/output\_25\_0 (1)>)
 
 ### Plotting an Image
 
@@ -230,7 +224,7 @@ image_gray = ImageOps.grayscale(image)
 image_gray 
 ```
 
-![png](<../../.gitbook/assets/output\_51\_0 (1)>)
+![png](<../../.gitbook/assets/output\_51\_0 (2)>)
 
 The mode is `L` for grayscale.
 
@@ -265,7 +259,7 @@ for n in range(3,8):
     plt.show()
 ```
 
-![png](<../../.gitbook/assets/output\_59\_0 (1)>)
+![png](../../.gitbook/assets/output\_59\_0)
 
 ![png](../../.gitbook/assets/output\_59\_1)
 
@@ -306,7 +300,7 @@ We can do the same for the blue and green channels:
 get_concat_h(baboon, blue)
 ```
 
-![png](../../.gitbook/assets/output\_68\_0)
+![png](<../../.gitbook/assets/output\_68\_0 (1)>)
 
 ```python
 get_concat_h(baboon, green)
@@ -573,32 +567,4 @@ plt.show()
 SyntaxError: invalid syntax
 ```
 
-Double-click **here** for a hint.
-
-Double-click **here** for the solution.
-
-### Authors
-
-[Joseph Santarcangelo](https://www.linkedin.com/in/joseph-s-50398b136/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01) has a PhD in Electrical Engineering, his research focused on using machine learning, signal processing, and computer vision to determine how videos impact human cognition. Joseph has been working for IBM since he completed his PhD.
-
-[Nayef Abou Tayoun](https://www.linkedin.com/in/nayefaboutayoun/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01) has a master of management in artificial intelligence degree, focusing on using machine learning and computer vision.
-
-## References
-
-\[1] Images were taken from: https://homepages.cae.wisc.edu/\~ece533/images/
-
-\[2] [Pillow Docs](https://pillow.readthedocs.io/en/stable/index.html?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-
-\[3] [Open CV](https://opencv.org/?utm\_medium=Exinfluencer\&utm\_source=Exinfluencer\&utm\_content=000026UJ\&utm\_term=10006555\&utm\_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkCV0101ENCoursera872-2022-01-01)
-
-\[4] Gonzalez, Rafael C., and Richard E. Woods. "Digital image processing." (2017).
-
-### Change Log
-
-| Date (YYYY-MM-DD) | Version | Changed By | Change Description      |
-| ----------------- | ------- | ---------- | ----------------------- |
-| 2020-07-20        | 0.2     | Azim       | Modified Multiple Areas |
-| 2020-07-17        | 0.1     | Azim       | Created Lab Template    |
-| 2021-03-06        | 0.3     | Nayef      | Modified some codes     |
-
-Copyright © 2020 IBM Corporation. All rights reserved.
+###
