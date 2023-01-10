@@ -162,7 +162,7 @@ plt.imshow(new_image)
 plt.show()
 ```
 
-![png](../../.gitbook/assets/output\_41\_0)
+![png](<../../.gitbook/assets/output\_41\_0 (1)>)
 
 You can also load the image using its path, this comes in handy if the image is not in your working directory:
 

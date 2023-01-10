@@ -151,7 +151,7 @@ plt.imshow(image)
 plt.show()
 ```
 
-![png](../../.gitbook/assets/output\_31\_0)
+![png](<../../.gitbook/assets/output\_31\_0 (1)>)
 
 You can also load the image using its full path. This comes in handy if the image is not in your working directory.
 
@@ -259,7 +259,7 @@ for n in range(3,8):
     plt.show()
 ```
 
-![png](../../.gitbook/assets/output\_59\_0)
+![png](<../../.gitbook/assets/output\_59\_0 (2)>)
 
 ![png](../../.gitbook/assets/output\_59\_1)
 
@@ -278,7 +278,7 @@ baboon = Image.open('baboon.png')
 baboon
 ```
 
-![png](../../.gitbook/assets/output\_62\_0)
+![png](<../../.gitbook/assets/output\_62\_0 (3)>)
 
 We can obtain the different RGB color channels and assign them to the variables `red`, `green`, and `blue`:
 
@@ -306,7 +306,7 @@ get_concat_h(baboon, blue)
 get_concat_h(baboon, green)
 ```
 
-![png](../../.gitbook/assets/output\_69\_0)
+![png](<../../.gitbook/assets/output\_69\_0 (1)>)
 
 ### PIL Images into NumPy Arrays
 

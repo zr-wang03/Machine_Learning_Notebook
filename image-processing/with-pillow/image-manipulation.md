@@ -140,7 +140,7 @@ In this lab, you will learn how to manipulate images, both as arrays and PIL ima
     plt.show()
     ```
 
-    ![png](../../.gitbook/assets/output\_25\_0)
+    ![png](<../../.gitbook/assets/output\_25\_0 (2)>)
 
     If a PIL function does not return a new image, the same principle applies. We will go over some examples later on.
 
@@ -155,7 +155,7 @@ In this lab, you will learn how to manipulate images, both as arrays and PIL ima
     plt.show()
     ```
 
-    ![png](../../.gitbook/assets/output\_29\_0)
+    ![png](<../../.gitbook/assets/output\_29\_0 (2)>)
 
     We can cast it to an array and find its shape:
 
@@ -216,7 +216,7 @@ In this lab, you will learn how to manipulate images, both as arrays and PIL ima
     plt.show()
     ```
 
-    ![png](../../.gitbook/assets/output\_42\_0)
+    ![png](<../../.gitbook/assets/output\_42\_0 (1)>)
 
     The Image module has built-in attributes that describe the type of flip. The values are just integers. Several are shown in the following `dict`:
 

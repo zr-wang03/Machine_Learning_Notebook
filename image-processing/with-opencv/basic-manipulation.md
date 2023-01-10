@@ -122,7 +122,7 @@ In this lab, you will learn how to manipulate images, OpenCV image Arrays. You w
     plt.show()
     ```
 
-    ![png](../../.gitbook/assets/output\_22\_0)
+    ![png](<../../.gitbook/assets/output\_22\_0 (1)>)
 
     We see they are the same, this is called aliasing. Aliasing happens whenever one variable's value is assigned to another variable because variables are just names that store references to values. We can also compare `baboon` and array `B`:
 
@@ -137,7 +137,7 @@ In this lab, you will learn how to manipulate images, OpenCV image Arrays. You w
     plt.show()
     ```
 
-    ![png](../../.gitbook/assets/output\_24\_0)
+    ![png](<../../.gitbook/assets/output\_24\_0 (1)>)
 
     They are different because they used the method copy.
 
@@ -219,7 +219,7 @@ In this lab, you will learn how to manipulate images, OpenCV image Arrays. You w
   ```
 *
 
-    ![png](../../.gitbook/assets/output\_40\_0)
+    ![png](<../../.gitbook/assets/output\_40\_0 (2)>)
 * OpenCV module has built-in attributes the describe the type of flip, the values are just integers. Several are shown in the following `dict`:
 * ```python
   flip = {"ROTATE_90_CLOCKWISE":cv2.ROTATE_90_CLOCKWISE,"ROTATE_90_COUNTERCLOCKWISE":cv2.ROTATE_90_COUNTERCLOCKWISE,"ROTATE_180":cv2.ROTATE_180}
@@ -349,7 +349,7 @@ In this lab, you will learn how to manipulate images, OpenCV image Arrays. You w
   ```
 *
 
-    ![png](../../.gitbook/assets/output\_63\_0)
+    ![png](<../../.gitbook/assets/output\_63\_0 (1)>)
 *
 
     ![png](../../.gitbook/assets/output\_63\_1)
